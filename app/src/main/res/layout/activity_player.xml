@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_blurred_background2"
+    tools:context="com.example.vishal.music.Player">
+
+    <LinearLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/songThumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/player_header_bg">
+
+        <ImageView
+            android:id="@+id/album_cover"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/linearLayout"
+        android:background="@android:color/transparent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+        <!-- Repeat Button -->
+        <ImageButton
+            android:id="@+id/btnRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:src="@drawable/btn_repeat" />
+
+        <!-- Shuffle Button -->
+        <ImageButton
+            android:id="@+id/btnShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:src="@drawable/btn_shuffle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:id="@+id/linearLayout">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btPv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_dark"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <ImageButton
+                android:id="@+id/btFB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_dark"
+                android:src="@android:drawable/ic_media_rew" />
+
+            <ImageButton
+                android:id="@+id/btPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_dark"
+                android:src="@android:drawable/ic_media_pause" />
+
+            <ImageButton
+                android:id="@+id/btFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_dark"
+                android:src="@android:drawable/ic_media_ff" />
+
+            <ImageButton
+                android:id="@+id/btNxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_dark"
+                android:src="@android:drawable/ic_media_next" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
